@@ -81,7 +81,7 @@ class UserController extends Controller
      */
     public function update(UserUpdateRequest $request, string $id)
     {
-        $data = $request->validated();  // Use validated data
+        $data = $request->validated(); 
 
         $user = User::find($id);
 
@@ -117,7 +117,7 @@ class UserController extends Controller
             ];
         }
 
-        $user->delete();  // Remove the user
+        $user->delete();
 
         return [
             'status' => 200,
